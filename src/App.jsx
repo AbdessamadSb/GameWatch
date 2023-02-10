@@ -8,7 +8,7 @@ import MainContent from "./components/MainContent";
 function App() {
   const [currIndex, setCurrIndex] = useState(0);
 
-  const dataSlider = useSelector((state) => state.games.popular);
+  const dataSlider = useSelector((state) => state.games.newGames);
 
   const dispatch = useDispatch();
 
