@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Slider = ({ dataSlider, currIndex, setCurrIndex }) => {
   const [width, setWidth] = useState(0);
+  const timeoutRef = useRef(null);
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
   useEffect(() => {
+    timeoutRef.current = setTimeout(() => nextImage(), 10000);
     if (currIndex % 2 === 0) {
       setWidth(33.4 * currIndex);
       if (currIndex === 10) {
@@ -12,6 +19,9 @@ const Slider = ({ dataSlider, currIndex, setCurrIndex }) => {
     } else {
       setWidth(33.4 * (currIndex - 1));
     }
+    return () => {
+      resetTimeout();
+    };
   }, [currIndex]);
   function setIm(e, index) {
     setCurrIndex(index);
@@ -94,7 +104,6 @@ const Slider = ({ dataSlider, currIndex, setCurrIndex }) => {
 
       <div className="overflow-hidden pr-[1%] relative">
         <div
-        
           style={{
             right: `${width}%`,
           }}
