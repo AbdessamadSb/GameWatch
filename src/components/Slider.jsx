@@ -57,7 +57,7 @@ const Slider = ({ dataSlider, currIndex, setCurrIndex }) => {
   return (
     <div
       style={{ userSelect: "none" }}
-      className="relative w-[93vw] py-10 mx-auto    lg:w-[50vw]  lg:mr-28"
+      className="relative w-[93vw] py-10 mx-auto    lg:w-[50vw]  lg:mr-20"
     >
       <svg
         onClick={prevImage}

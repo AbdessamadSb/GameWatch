@@ -34,9 +34,9 @@ const MainContent = ({ dataSlider, currIndex, setCurrIndex }) => {
         className="min-w-[calc(100%+160px)] transition-all bg-center flex items-center flex-col lg:block  min-h-[90vh] bg-cover relative bg-no-repeat  ml-[-80px] my-8 "
       >
         
-        <div className="absolute w-full h-full bg-gradient-to-r from-black opacity-50"></div>
+        <div className="absolute w-full h-full bg-gradient-to-b from-black md:bg-gradient-to-r md:from-black opacity-50"></div>
         
-        <div className="p-16 w-full md:w-[50rem]  lg:w-[70rem]   relative  z-10">
+        <div className="p-20 w-full md:w-[50rem]  lg:w-[70rem]   relative  z-10">
           <h1 className="text-white text-center lg:text-left text-4xl  lg:text-[72px] font-bold font-display h-40 lg:h-60 leading-tight">
             {dataSlider.length ? dataSlider[currIndex].name : "Loading"}
           </h1>
@@ -59,6 +59,7 @@ const MainContent = ({ dataSlider, currIndex, setCurrIndex }) => {
               More infos
             </button>
           </div>
+          {/* <div className="w-[456px] h-[456px] rounded-full blur-[100px] bg-black -z-10"></div> */}
         </div>
         <div >
           <Slider
@@ -68,7 +69,7 @@ const MainContent = ({ dataSlider, currIndex, setCurrIndex }) => {
           />
         </div>
       </motion.div>
-      <div className="w-[800px] h-[400px] absolute left-0 top-70  bg-black blur-[300px]"></div>
+      
     </div>
   );
 };

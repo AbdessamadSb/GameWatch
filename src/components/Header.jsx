@@ -15,7 +15,7 @@ const Header = () => {
     SetOpenSearch(!openSearch);
   }
   return (
-    <div className="flex flex-col gap-10 md:flex-row justify-between items-center">
+    <div className="flex flex-col gap-10 md:flex-row justify-between items-center font-display">
       <div className="flex md:flex-row flex-col gap-6 md:gap-10 items-center">
         <div className="flex w-full items-center">
           <div>
@@ -40,9 +40,7 @@ const Header = () => {
               />
             </svg>
           </div>
-          <h1 className="text-white text-2xl font-bold font-display ml-2">
-            Game Watch
-          </h1>
+          <h1 className="text-white text-2xl font-bold f ml-2">Game Watch</h1>
         </div>
         <div className="text-white w-[90vw] md:w-full flex items-center">
           <svg

@@ -12,7 +12,7 @@ export const fetchGames = createAsyncThunk("games/fetchGames", async () => {
   const newData = await axios.get(newGamesURL());
   return [popularData, upcomingData, newData];
 });
-console.log(fetchGames());
+
 export const gamesSlicer = createSlice({
   name: "games",
   initialState,
