@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import { motion } from "framer-motion";
 const Slider = ({ dataSlider, currIndex, setCurrIndex }) => {
   const [width, setWidth] = useState(0);
   const timeoutRef = useRef(null);
@@ -55,7 +55,10 @@ const Slider = ({ dataSlider, currIndex, setCurrIndex }) => {
       })
     : "LOADING";
   return (
-    <div
+    <motion.div
+    initial={{x:500}}
+    animate={{x:0}}
+    transition={{duration:0.5}}
       style={{ userSelect: "none" }}
       className="relative w-[93vw] py-10 mx-auto    lg:w-[50vw]  lg:mr-20"
     >
@@ -112,7 +115,7 @@ const Slider = ({ dataSlider, currIndex, setCurrIndex }) => {
           {renderedImg}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,6 @@
 //import api key
 
-const key = "d5a0ebf54d244488b7fd6ece53a515df";
+const key = "b6352b45a5cb4c47a822dd7398a70cf2";
 //base URL
 const base_url = "https://api.rawg.io/api/";
 
